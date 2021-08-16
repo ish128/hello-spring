@@ -1,6 +1,7 @@
 package ish128.hellospring;
 
 import ish128.hellospring.repository.JdbcMemberRepository;
+import ish128.hellospring.repository.JdbcTemplateMemberRepository;
 import ish128.hellospring.repository.MemberRepository;
 import ish128.hellospring.repository.MemoryMemberRepository;
 import ish128.hellospring.service.MemberService;
@@ -30,6 +31,8 @@ public class SpringConfig {
 
     //return new MemoryMemberRepository();
 
-    return new JdbcMemberRepository(dataSource);
+    // return new JdbcMemberRepository(dataSource);
+
+    return new JdbcTemplateMemberRepository(dataSource);
   }
 }
