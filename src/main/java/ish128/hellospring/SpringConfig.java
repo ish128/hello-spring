@@ -1,5 +1,6 @@
 package ish128.hellospring;
 
+import ish128.hellospring.aop.TimeTraceAop;
 import ish128.hellospring.repository.JdbcMemberRepository;
 import ish128.hellospring.repository.JdbcTemplateMemberRepository;
 import ish128.hellospring.repository.JpaMemberRepository;
@@ -28,4 +29,7 @@ public class SpringConfig {
   public MemberService memberService(){
     return new MemberService(memberRepository);
   }
+
+/*  @Bean
+  public TimeTraceAop timeTraceAop(){    return new TimeTraceAop();  }*/
 }
